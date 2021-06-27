@@ -1,3 +1,14 @@
+# react checkpoint
+
+continue from here:
+https://reactjs.org/docs/state-and-lifecycle.html
+
+# js reference
+
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/A_re-introduction_to_JavaScript
+
+# node
+
   npm start
     Starts the development server.
 
