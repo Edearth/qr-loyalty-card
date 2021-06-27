@@ -1,70 +1,62 @@
-# Getting Started with Create React App
+# QR loyalty card
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## The "problem"
 
-## Available Scripts
+A friend of mine saw me use a loyalty card in a coffee shop.
+He told me he thinks it's uncomfortable
+to carry a bunch of paper cards around
+just in case he'll go to that place.
+So he usually doesn't have the card when he needs it.
+This is an attempt to "solve" that problem with an app.
 
-In the project directory, you can run:
+## The idea
 
-### `npm start`
+My main concern when using apps like these
+is they are incredibly slow to load.
+And most of the times
+you have to navigate and open some menus,
+which are also slow,
+before you can find the QR code.
+To avoid that, the user will have a locally generated UUID
+and that will be stored in the device's storage.
+Everything stays in the device,
+then gets registered in the backend later.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+The main screen is just a QR code with the user id.
+This should make the app super fast to load. 
+No login, no backend calls required before rendering.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+![an overly complicated diagram with notes explaining what I explain with text in this document](design-doc-lol.jpg)
 
-### `npm test`
+### "Stamping" the card / usage
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+The store owner should scan the code 
+with a phone/physical scanner 
+that sends a message to the backend. 
+This should respond with 
+whether or not the user completed their loyalty card.
+And the value should be updated in the backend.
 
-### `npm run build`
+### Retrieve account
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Since the id is stored locally,
+users will lose their data if they uninstall the app.
+There should be an option to create an account
+so they can retrieve this id from the backend later.
+When they log in, the app can store the id
+to use it the next time it starts up.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Checking user card
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+If the user scrolls down on the main screen
+they will see a list of stores they use the app with.
+These show an image for the logo/picture of that store
+as well as the store name.
+They also show how many stamps the user collected
+and how many remain before completing the card.
 
-### `npm run eject`
+Ideally the user should be able to click on that card,
+opening a screen with information about the store.
+Name, description, an "Open now/Closed" indicator,
+maybe a schedule and definitely a location link to Maps.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
