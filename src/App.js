@@ -66,13 +66,13 @@ function mockedListResponse() {
       },
       {
         name: "Store 2",
-        picture: "https://cdn2.thecatapi.com/images/twnYLeQRZ.png",
+        picture: "https://cdn2.thecatapi.com/images/2gh.jpg",
         stampsCollected: 15,
         stampsRequired: 20
       },
       {
         name: "Store 3",
-        picture: "https://cdn2.thecatapi.com/images/twnYLeQRZ.png",
+        picture: "https://cdn2.thecatapi.com/images/xuYI_8ibY.jpg",
         stampsCollected: 8,
         stampsRequired: 10
       }
