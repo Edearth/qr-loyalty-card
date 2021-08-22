@@ -1,4 +1,6 @@
-# QR loyalty card
+# QR loyalty card (WIP)
+
+> Note: this is a project I started for learning and it's currently paused and unfinished! I'll probably come back to it in the future.
 
 ## The "problem"
 
